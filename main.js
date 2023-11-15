@@ -19,11 +19,10 @@ const coffees = [
 const createCoffeeElement = (coffee) => {
 	let tr = document.createElement("tr");
 	tr.classList.add("coffee");
-
 	tr.innerHTML = `
-        <td>${coffee.id}</td>
-        <td>${coffee.name}</td>
-        <td>${coffee.roast}</td>
+                    <td>${coffee.id}</td>
+                    <td>${coffee.name}</td>
+                    <td>${coffee.roast}</td>
     `;
 	return tr;
 };

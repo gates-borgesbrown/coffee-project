@@ -8,6 +8,20 @@
     min-height: 100dvh;
 }
 
+.container {
+    background-color: black;
+}
+
+img {
+    min-height: 100dvh;
+}
+.hero {
+    height: 400px;
+    opacity: .9;
+    padding: 50px;
+    margin-bottom: 50px;
+}
+
 table {
     border-collapse: collapse;
     margin: 15px 0;
