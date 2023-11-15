@@ -16,42 +16,84 @@ const coffees = [
 	{ id: 14, name: "French", roast: "dark" },
 ];
 
-const createCoffeeElement = (coffee) => {
-	let tr = document.createElement("tr");
-	tr.classList.add("coffee");
-	tr.innerHTML = `
-                    <td>${coffee.id}</td>
-                    <td>${coffee.name}</td>
-                    <td>${coffee.roast}</td>
+const createLightCoffeeElement = (coffee) => {
+	let lightAccordion = document.createElement("li");
+	lightAccordion.classList.add("accordion-body-light")
+	lightAccordion.innerHTML = `
+                    ${coffee.name}
     `;
-	return tr;
+	return lightAccordion;
 };
 
-const renderCoffees = (coffees, target) => {
-	// Clear tbody before inserting new rows
+const createMediumCoffeeElement = (coffee) => {
+	let mediumAccordion = document.createElement("li");
+	mediumAccordion.classList.add("accordion-body-medium")
+	mediumAccordion.innerHTML = `
+                    ${coffee.name}
+    `;
+	return mediumAccordion;
+};
+
+const createDarkCoffeeElement = (coffee) => {
+	let darkAccordion = document.createElement("li");
+	darkAccordion.classList.add("accordion-body-dark")
+	darkAccordion.innerHTML = `
+                    ${coffee.name}
+    `;
+	return darkAccordion;
+};
+
+const renderLightCoffees = (coffees, target) => {
 	target.innerHTML = "";
-	for (let i = coffees.length - 1; i >= 0; i--) {
-		const coffeeElement = createCoffeeElement(coffees[i]);
-		target.appendChild(coffeeElement);
-	}
+		for (let i = 0; i < 3; i++) {
+			const coffeeElement = createLightCoffeeElement(coffees[i]);
+			target.appendChild(coffeeElement);
+		}
 };
 
-const updateCoffees = (e, target, selection) => {
-	e.preventDefault();
-	const selectedRoast = selection.value;
-	const filteredCoffees = coffees.filter((coffee) => coffee.roast === selectedRoast);
-	renderCoffees(filteredCoffees, target);
+const renderMediumCoffees = (coffees, target) => {
+	target.innerHTML = "";
+		for (let i = 3; i < 6; i++) {
+			const coffeeElement = createMediumCoffeeElement(coffees[i]);
+			target.appendChild(coffeeElement);
+		}
 };
+
+const renderDarkCoffees = (coffees, target) => {
+	target.innerHTML = "";
+		for (let i = 6; i < coffees.length; i++) {
+			const coffeeElement = createDarkCoffeeElement(coffees[i]);
+			target.appendChild(coffeeElement);
+		}
+};
+
+// const updateCoffees = (e, target, selection) => {
+// 	e.preventDefault();
+// 	const selectedRoast = selection.value;
+// 	const filteredCoffees = coffees.filter((coffee) => coffee.roast === selectedRoast);
+// 	renderCoffees(filteredCoffees, target);
+// };
 
 // IIFE
 (() => {
-	const tbody = document.querySelector("#coffees");
-	const submitButton = document.querySelector("#submit");
-	const roastSelection = document.querySelector("#roast-selection");
-	renderCoffees(coffees, tbody, roastSelection);
+	const accordionBodyLight = document.querySelector("#light-roast");
+	// const submitButton = document.querySelector("#submit");
+	const roastLightSelection = document.querySelector("#roast-selection");
+	renderLightCoffees(coffees, accordionBodyLight, roastLightSelection);
 
-	submitButton.addEventListener("click", (e) => {
-		updateCoffees(e, tbody, roastSelection);
 
-	});
+	const accordionBodyMedium = document.querySelector("#medium-roast");
+	const roastMediumSelection = document.querySelector("#roast-selection");
+	renderMediumCoffees(coffees, accordionBodyMedium, roastMediumSelection);
+
+	const accordionBodyDark = document.querySelector("#dark-roast");
+	const roastDarkSelection = document.querySelector("#roast-selection");
+	renderDarkCoffees(coffees, accordionBodyDark, roastDarkSelection);
+
+	// submitButton.addEventListener("click", (e) => {
+	// 	updateCoffees(e, accordionBody, roastSelection);
+	// });
+
+
+
 })();
