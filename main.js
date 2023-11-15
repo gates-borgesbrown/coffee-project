@@ -53,5 +53,6 @@ const updateCoffees = (e, target, selection) => {
 
 	submitButton.addEventListener("click", (e) => {
 		updateCoffees(e, tbody, roastSelection);
+
 	});
 })();
