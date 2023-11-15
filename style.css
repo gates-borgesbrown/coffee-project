@@ -17,7 +17,7 @@
 .container.hero {
     background-color: chocolate;
     opacity: 35%;
-    /*position: relative;*/
+    position: relative;
 }
 
 img {
