@@ -1,4 +1,8 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css") layer(framework);
+@import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&display=swap');
+
+
 * {
     line-height: unset;
 }
@@ -10,8 +14,6 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
-    opacity: 85%;
-
 }
 
 .container.hero {
@@ -20,8 +22,13 @@
 }
 
 img {
-    min-height: 100dvh;
+    display: flex;
+    flex-wrap: wrap;
+    width: 50px;
+    min-height: 50px;
+    padding: 5px;
 }
+
 .hero {
     height: 400px;
     opacity: .9;
@@ -34,16 +41,19 @@ ul {
     align-items: stretch;
     justify-content: space-evenly;
 }
+
 li {
     list-style: none;
-    display: flex;
-    flex-wrap: wrap;
+    font-family: 'Tangerine', cursive;
+    font-size: 30pt;
+    font-weight: bold;
+
 }
 
 .navbar-brand {
     font-size: 30px;
-    /*text-align: center;*/
 }
+
 .row {
     flex: fit-content;
 }
@@ -55,7 +65,6 @@ li {
 
 .navbar {
     font-size: 25px;
-    /*gap: 100px;*/
     text-align: center;
     background-color: black;
 }
@@ -66,21 +75,19 @@ a {
 
 
 .accordion {
-    /*position: relative;*/
-    justify-content: center;
     right: 200px;
     top: 350px;
     width: 1040px;
     background-image: var(--bs-gradient);
-    text-align: center;
-    font-size: x-large;
 }
 
 .accordion-body-light {
+
     background-color: #FFE4C4;
 }
 
 .accordion-body-medium {
+
     background-color: #DEB887;
 }
 
@@ -95,4 +102,34 @@ a {
 
 .form-label {
     color: white;
+}
+
+h1 {
+    background-color: chocolate;
+    color: #FFE4C4;
+}
+h3 {
+    background-color: chocolate;
+    color: #FFE4C4;
+}
+
+.form-label {
+    background-color: chocolate;
+    color: #FFE4C4;
+}
+
+#add-coffee-btn {
+    background-color: chocolate;
+    color: #FFE4C4;
+}
+
+p {
+    display: flex;
+    justify-content: start;
+    font-family: 'Bad Script', cursive;;
+    font-size: 20pt;
+}
+
+#dark-roast {
+    flex-wrap: wrap;
 }

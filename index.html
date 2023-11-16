@@ -6,12 +6,11 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="page-wrapper background">
-
+<!--    HEADER STARTS  -->
     <header>
         <div class="container-fluid">
         <nav class="navbar navbar-expand-lg" >
             <div class="row d-flex align-items-center justify-content-center ">
-
                 <div class="col d-flex align-items-center justify-content-center col-1">
                     <img id="navbar-image" src="images/new-coffee-icon.jpg" alt="Coffee Cup Icon">
                 </div>
@@ -40,9 +39,9 @@
                         </div>
                 </div>
                 <div class="col align-self-end col-3">
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    <form class="d-flex" role="search" id="navSearch">
+                        <input id="search" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button id="submit-search" class="btn btn-outline-success" type="submit">Search</button>
                     </form>
                 </div>
             </div>
@@ -51,6 +50,10 @@
 </header>
 <!-- HEADER END -->
 <!-- HERO BEGIN -->
+
+
+<!-- HERO END -->
+<!-- BODY BEGIN -->
     <section class="container hero d-flex justify-content-center align-items-center">
         <div class="row ">
             <div class="d-flex col text-center justify-content-center">
@@ -64,7 +67,7 @@
                 </h2>
                 <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                     <div class="accordion-body-light">
-                        Description of what makes a light roast light.
+                        <p>Light roasted coffees are roasted the least amount of time. As a result, light roasts will have more brightness, more complexity, and more fruit-forward, herbal flavors. Light roasts will have more caffeine than medium or dark roasts.</p>
                         <ul id="light-roast">
 
 
@@ -82,7 +85,7 @@
                 </h2>
                 <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                     <div class="accordion-body-medium">
-                        Description of what makes a medium roast medium.
+                        <p>Description of what makes a medium roast medium.</p>
                         <ul id="medium-roast">
 
 
@@ -100,7 +103,7 @@
                 </h2>
                 <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                     <div class="accordion-body-dark">
-                        Description of what makes a dark roast dark.
+                        <p>Dark roast coffee beans stay on the roasting machine for a longer time or at a higher temperature. This means the beans will have a more single-note flavor and less complexity.</p>
                         <ul id="dark-roast">
 
 
@@ -108,13 +111,15 @@
                     </div>
                 </div>
             </div>
+
+        <!--     DARK ROAST END  -->
         </div>
                 </div>
             </div>
         </div>
     </section>
 
-
+<!--    ADDING NEW COFFEE START-->
 
     <div class="container">
         <header class="text-center my-4">
@@ -126,7 +131,7 @@
                     <h3><label class="form-label" for="to-do">Enter New Coffee:</label></h3>
                     <input class="form-control" type="text" name="to-do" id="to-do">
                     <div class="d-grid">
-                        <button class="btn btn-secondary mt-3 add" id="input" data-add>New Coffee</button>
+                        <button class="btn btn-secondary mt-3 add" id="add-coffee-btn" data-add>Add New Coffee</button>
                     </div>
                 </form>
             </section>
@@ -138,21 +143,7 @@
             </section>
         </main>
     </div>
-<!-- HERO END -->
-<!-- BODY BEGIN -->
-<!--    <section class="container hero d-flex justify-content-center align-items-center">-->
-<!--        <div class="row flex-grow-1">-->
-<!--            <div class="d-flex col text-center justify-content-center">-->
-<!--                <div class="d-flex image-title justify-content-center align-items-center">-->
-<!--                    -->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </section>-->
-
-<!--   LIGHT ROAST ENDS     -->
-
-
+<!--  ADDING NEW COFFEE END -->
 
 
 

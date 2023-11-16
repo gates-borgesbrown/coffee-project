@@ -18,8 +18,9 @@ const coffees = [
 
 const createLightCoffeeElement = (coffee) => {
 	let lightAccordion = document.createElement("li");
-	lightAccordion.classList.add("accordion-body-light")
+	lightAccordion.classList.add("accordion-body-light", "d-flex", "col-4")
 	lightAccordion.innerHTML = `
+					<img src="./images/light-roast-beans.webp">
                     ${coffee.name}
     `;
 	return lightAccordion;
@@ -27,8 +28,9 @@ const createLightCoffeeElement = (coffee) => {
 
 const createMediumCoffeeElement = (coffee) => {
 	let mediumAccordion = document.createElement("li");
-	mediumAccordion.classList.add("accordion-body-medium")
+	mediumAccordion.classList.add("accordion-body-medium", "d-flex", "col-4")
 	mediumAccordion.innerHTML = `
+					<img src="./images/medium-bright-coffee-beans.jpg">
                     ${coffee.name}
     `;
 	return mediumAccordion;
@@ -36,8 +38,9 @@ const createMediumCoffeeElement = (coffee) => {
 
 const createDarkCoffeeElement = (coffee) => {
 	let darkAccordion = document.createElement("li");
-	darkAccordion.classList.add("accordion-body-dark")
+	darkAccordion.classList.add("accordion-body-dark", "d-flex", "col-4")
 	darkAccordion.innerHTML = `
+					<img src="./images/dark-roast-beans.jpeg">
                     ${coffee.name}
     `;
 	return darkAccordion;
@@ -67,49 +70,62 @@ const renderDarkCoffees = (coffees, target) => {
 		}
 };
 
-// const updateCoffees = (e, target, selection) => {
-// 	e.preventDefault();
-// 	const selectedRoast = selection.value;
-// 	const filteredCoffees = coffees.filter((coffee) => coffee.roast === selectedRoast);
-// 	renderCoffees(filteredCoffees, target);
-// };
-// const createListElement = (toDo) => {
-// 	const listElement = document.createElement("li");
-// 	listElement.classList.add("to-do-item", "list-group-item", "d-flex", "justify-content-between", "align-items-center")
-// 	listElement.innerHTML = `
-//         <p class="m-0">${toDo}</p>
-//         <button class="btn btn-danger" data-done>Remove</button>
-//     `;
-// 	const doneBtn = listElement.querySelector("button[data-done]");
-// 	doneBtn.addEventListener('click', e => {
-// 		listElement.remove();
-// 	});
-// 	document.querySelector("#to-do-list").appendChild(listElement);
-// };
-//
-// const updateList = toDos => {
-// 	document.querySelector("#to-do-list").innerHTML = "";
-// 	for (let toDo of toDos) {
-// 		createListElement(toDo);
-// 	}
-// }
-// const toDos = [];
-// const userInput = document.querySelector('#to-do');
-// const addBtn = document.querySelector('button#input');
-// updateList();
-// addBtn.addEventListener('click', e => {
-// 	e.preventDefault();
-// 	toDos.push(userInput.value);
-// 	updateList(toDos);
-// 	userInput.value = "";
-// });
+
+let todos = [];
+const renderTodoElement = (todo) => {
+	const listItem = document.createElement("li");
+	listItem.classList.add("to-do-item", "list-group-item", "d-flex", "justify-content-between", "align-items-center");
+	listItem.innerHTML = `
+        <p class="m-0">${todo}</p>
+        <button class="btn btn-danger" data-done>Remove</button>
+    `;
+	const deleteBtn = listItem.querySelector("button[data-done]");
+	deleteBtn.addEventListener("click", (e) => {
+		listItem.remove();
+		const index = todos.indexOf(todo);
+		if (index > -1) {
+			todos.splice(index, 1);
+		}
+	});
+	return listItem;
+};
+const updateTodos = (todos) => {
+	document.querySelector("#to-do-list").innerHTML = "";
+	const itemsFragment = document.createDocumentFragment();
+	for (let todo of todos) {
+		itemsFragment.appendChild(renderTodoElement(todo));
+	}
+	document.querySelector("#to-do-list").appendChild(itemsFragment);
+};
+const addTodo = (todo, todos) => {
+	const userInput = document.querySelector("#to-do").value;
+	todos.push(todo);
+	updateTodos(todos);
+	return todos;
+};
+
+const handleFilterEvents = (coffees) => {
+	const searchForm = document.querySelector('#navSearch');
+	const searchInput = document.querySelector('#search');
+	searchForm.addEventListener('submit', e => {
+		e.preventDefault();
+		console.log('submit event');
+		const searchValue = searchInput.value;
+		const accordionItems = document.querySelectorAll('.accordion-item');
+		for(let accordion of accordionItems) {
+			console.log(accordion.textContent.toLowerCase());
+			if (accordion.textContent.toLowerCase().includes(searchValue.toLowerCase()) && searchValue){
+				accordion.querySelector('.accordion-collapse').classList.add('show');
+			} else {
+				accordion.querySelector('.accordion-collapse').classList.remove('show');
+			}
+		}
+	});
+};
 
 
-
-// IIFE
 (() => {
 	const accordionBodyLight = document.querySelector("#light-roast");
-	// const submitButton = document.querySelector("#submit");
 	const roastLightSelection = document.querySelector("#roast-selection");
 	renderLightCoffees(coffees, accordionBodyLight, roastLightSelection);
 
@@ -122,44 +138,15 @@ const renderDarkCoffees = (coffees, target) => {
 	const roastDarkSelection = document.querySelector("#roast-selection");
 	renderDarkCoffees(coffees, accordionBodyDark, roastDarkSelection);
 
-
-	// submitButton.addEventListener("click", (e) => {
-	// 	updateCoffees(e, accordionBody, roastSelection);
-	// });
-	(() => {
-	const createListElement = (toDo) => {
-		const listElement = document.createElement("li");
-		listElement.classList.add("to-do-item", "list-group-item", "d-flex", "justify-content-between", "align-items-center")
-		listElement.innerHTML = `
-        <p class="m-0">${toDo}</p>
-        <button class="btn btn-danger" data-done>Remove</button>
-    `;
-		const doneBtn = listElement.querySelector("button[data-done]");
-		doneBtn.addEventListener('click', e => {
-			listElement.remove();
-		});
-		document.querySelector("#to-do-list").appendChild(listElement);
-	};
-
-	const updateList = toDos => {
-		document.querySelector("#to-do-list").innerHTML = "";
-		for (let toDo of toDos) {
-			createListElement(toDo);
-		}
-	}
-	const toDos = [];
-	const userInput = document.querySelector('#to-do');
-	const addBtn = document.querySelector('button#input');
-	updateList();
-	addBtn.addEventListener('click', e => {
+	updateTodos(todos);
+	const addBtn = document.querySelector("button[data-add]");
+	const userInput = document.querySelector("#to-do");
+	addBtn.addEventListener("click", (e) => {
 		e.preventDefault();
-		toDos.push(userInput.value);
-		updateList(toDos);
-		userInput.value = "";
+		todos = addTodo(userInput.value, todos);
 	});
-	})();
 
-
+handleFilterEvents(coffees);
 
 
 
