@@ -86,5 +86,13 @@ a {
 
 .accordion-body-dark {
     background-color: #8B4513;
+    color: #FFE4C4;
 }
 
+.text-center {
+    color: white;
+}
+
+.form-label {
+    color: white;
+}
