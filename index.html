@@ -8,97 +8,122 @@
 <body class="page-wrapper background">
 
     <header>
-        <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Coffee</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                    </li>
+        <nav class="navbar navbar-expand-lg" >
+            <div class="row d-flex align-items-center justify-content-center ">
 
-                </ul>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
+                <div class="col d-flex align-items-center justify-content-center col-1">
+                    <img id="navbar-image" src="./images/coffee-cup-navbar-icon.tiff" alt="Coffee Cup Icon">
+                </div>
+                <div class="col d-flex align-items-center col-1">
+                    <a class="navbar-brand" href="#">Coffee</a>
+                </div>
+                <div class="col d-flex align-items-center col-7">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">About Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Product</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Locations</a>
+                            </li>
+                        </ul>
+                        </div>
+                </div>
+                <div class="col align-self-end col-3">
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
             </div>
-        </div>
-    </nav>
-    </header>
+        </nav>
+    </div>
+</header>
 <!-- HEADER END -->
 <!-- HERO BEGIN -->
     <section class="container hero d-flex justify-content-center align-items-center">
-<!--        <div class="row flex-grow-1">-->
-<!--            <div class="d-flex col text-center justify-content-center">-->
-<!--                <div class="d-flex image-title justify-content-center align-items-center">-->
-<!--                    <img src="./images/cozy%20forest%20cafe.jpeg" alt="Cozy Coffee Shop">-->
-                    <div class="accordion" id="accordionTable">
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingOne">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                                    Light Roasts
-                                </button>
-                            </h2>
-                            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                                <div class="accordion-body-light">
-                                    Description of what makes a light roast light.
-                                    <ul id="light-roast">
+        <div class="row ">
+            <div class="d-flex col text-center justify-content-center">
+                <div class="d-flex image-title justify-content-center align-items-center">
+        <div class="accordion" id="accordionTable">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        Light Roasts
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                    <div class="accordion-body-light">
+                        Description of what makes a light roast light.
+                        <ul id="light-roast">
 
 
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <!--   LIGHT ROAST ENDS     -->
-                        <!--   MEDIUM ROAST START     -->
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingTwo">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    Medium Roasts
-                                </button>
-                            </h2>
-                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                                <div class="accordion-body-medium">
-                                    Description of what makes a medium roast medium.
-                                    <ul id="medium-roast">
-
-
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <!--  MEDIUM ROAST END      -->
-                        <!--  DARK ROAST START      -->
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingThree">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    Dark Roasts
-                                </button>
-                            </h2>
-                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                                <div class="accordion-body-dark">
-                                    Description of what makes a dark roast dark.
-                                    <ul id="dark-roast">
-
-
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
+                        </ul>
                     </div>
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
+                </div>
+            </div>
+            <!--   LIGHT ROAST ENDS     -->
+            <!--   MEDIUM ROAST START     -->
+            <div class="accordion-item ">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Medium Roasts
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                    <div class="accordion-body-medium">
+                        Description of what makes a medium roast medium.
+                        <ul id="medium-roast">
+
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--  MEDIUM ROAST END      -->
+            <!--  DARK ROAST START      -->
+            <div class="accordion-item ">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed d-flex justify-content-center" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Dark Roasts
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                    <div class="accordion-body-dark">
+                        Description of what makes a dark roast dark.
+                        <ul id="dark-roast">
+
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+                </div>
+            </div>
+        </div>
     </section>
 <!-- HERO END -->
 <!-- BODY BEGIN -->
+<!--    <section class="container hero d-flex justify-content-center align-items-center">-->
+<!--        <div class="row flex-grow-1">-->
+<!--            <div class="d-flex col text-center justify-content-center">-->
+<!--                <div class="d-flex image-title justify-content-center align-items-center">-->
+<!--                    -->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </section>-->
 
 <!--   LIGHT ROAST ENDS     -->
 
