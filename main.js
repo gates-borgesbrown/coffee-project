@@ -73,6 +73,38 @@ const renderDarkCoffees = (coffees, target) => {
 // 	const filteredCoffees = coffees.filter((coffee) => coffee.roast === selectedRoast);
 // 	renderCoffees(filteredCoffees, target);
 // };
+// const createListElement = (toDo) => {
+// 	const listElement = document.createElement("li");
+// 	listElement.classList.add("to-do-item", "list-group-item", "d-flex", "justify-content-between", "align-items-center")
+// 	listElement.innerHTML = `
+//         <p class="m-0">${toDo}</p>
+//         <button class="btn btn-danger" data-done>Remove</button>
+//     `;
+// 	const doneBtn = listElement.querySelector("button[data-done]");
+// 	doneBtn.addEventListener('click', e => {
+// 		listElement.remove();
+// 	});
+// 	document.querySelector("#to-do-list").appendChild(listElement);
+// };
+//
+// const updateList = toDos => {
+// 	document.querySelector("#to-do-list").innerHTML = "";
+// 	for (let toDo of toDos) {
+// 		createListElement(toDo);
+// 	}
+// }
+// const toDos = [];
+// const userInput = document.querySelector('#to-do');
+// const addBtn = document.querySelector('button#input');
+// updateList();
+// addBtn.addEventListener('click', e => {
+// 	e.preventDefault();
+// 	toDos.push(userInput.value);
+// 	updateList(toDos);
+// 	userInput.value = "";
+// });
+
+
 
 // IIFE
 (() => {
@@ -90,7 +122,12 @@ const renderDarkCoffees = (coffees, target) => {
 	const roastDarkSelection = document.querySelector("#roast-selection");
 	renderDarkCoffees(coffees, accordionBodyDark, roastDarkSelection);
 
-	const createListElement = (toDo, toDos) => {
+
+	// submitButton.addEventListener("click", (e) => {
+	// 	updateCoffees(e, accordionBody, roastSelection);
+	// });
+	(() => {
+	const createListElement = (toDo) => {
 		const listElement = document.createElement("li");
 		listElement.classList.add("to-do-item", "list-group-item", "d-flex", "justify-content-between", "align-items-center")
 		listElement.innerHTML = `
@@ -110,25 +147,19 @@ const renderDarkCoffees = (coffees, target) => {
 			createListElement(toDo);
 		}
 	}
-
-
-	(() => {
-		const toDos = [];
-		const userInput = document.querySelector('#to-do');
-		const addBtn = document.querySelector('button#input');
+	const toDos = [];
+	const userInput = document.querySelector('#to-do');
+	const addBtn = document.querySelector('button#input');
+	updateList();
+	addBtn.addEventListener('click', e => {
+		e.preventDefault();
+		toDos.push(userInput.value);
 		updateList(toDos);
-		addBtn.addEventListener('click', e => {
-			e.preventDefault();
-			toDos.push(userInput.value);
-			updateList(toDos);
-			userInput.value = "";
-		})
-
+		userInput.value = "";
+	});
 	})();
 
-	// submitButton.addEventListener("click", (e) => {
-	// 	updateCoffees(e, accordionBody, roastSelection);
-	// });
+
 
 
 
