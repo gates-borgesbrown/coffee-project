@@ -28,7 +28,6 @@
 .container.accordion {
     margin-top: 50px;
     margin-bottom: 50px;
-
 }
 .container.add-coffee {
     background-image: url("images/cozy forest cafe.jpeg");
@@ -38,7 +37,6 @@
     margin-top: 50px;
     padding: unset;
 }
-
 img {
     display: flex;
     flex-wrap: wrap;
@@ -46,7 +44,6 @@ img {
     min-height: 50px;
     padding: 5px;
 }
-
 .hero {
     background-image: url("images/coffee-world.webp");
     height: 400px;
@@ -55,76 +52,57 @@ img {
     margin-bottom: unset;
     background-position: center;
 }
-
 ul {
     display: flex;
     align-items: stretch;
     justify-content: space-evenly;
 }
-
 li {
     list-style: none;
     font-family: 'Tangerine', cursive;
     font-size: 30pt;
     font-weight: 700;
-
 }
-
 .navbar-brand {
     font-size: 30px;
 }
-
 .row {
     flex: fit-content;
 }
-
  img#navbar-image {
     width: 50px;
     min-height: 50px;
 }
-
 .navbar {
     font-size: 25px;
     text-align: center;
     background-color: black;
     width: 100%;
-
 }
-
 a {
     color: #FFE4C4;
 }
-
-
 .accordion {
     right: 200px;
     top: 350px;
     width: 1040px;
 }
-
 .accordion-body-light {
-
     background-color: #FFE4C4;
 }
-
 .accordion-body-medium {
-
     background-color: #DEB887;
 }
-
 .accordion-body-dark {
     background-color: #8B4513;
     color: #FFE4C4;
 }
-
 .text-center {
     color: white;
 }
-
 .form-label {
     color: white;
 }
-
 h1 {
     background-color: black;
     color: #FFE4C4;
@@ -136,30 +114,25 @@ h2 {
     background-color: black;
     color: #FFE4C4;
     font-family: 'Bad Script', cursive;
-
 }
 h3 {
     background-color: black;
     color: #FFE4C4;
     font-family: 'Bad Script', cursive;
     font-size: 15pt;
-
 }
 .add-coffee .row {
     display: flex;
     justify-content: center;
 }
-
 .form-label {
     background-color: black;
     color: #FFE4C4;
 }
-
 #add-coffee-btn {
     background-color: black;
     color: #FFE4C4;
 }
-
 .container.add-coffee {
     max-width: 50%;
     text-align: center;
@@ -171,7 +144,6 @@ p {
     font-family: 'Bad Script', cursive;
     font-size: 20pt;
 }
-
 #dark-roast {
     flex-wrap: wrap;
 }
