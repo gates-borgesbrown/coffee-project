@@ -2,24 +2,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bad+Script&display=swap');
 
-
-* {
-    line-height: unset;
-}
 .page-wrapper {
     display: flex;
     flex-direction: column;
     min-height: 100dvh;
-    background-image: url("images/coffee-world.webp"), url("images/coffee beans background.jpg");
     background-position: center;
+    flex: fit-content;
     background-repeat: no-repeat;
-    /*background-size: contain;*/
+    padding: unset;
+    margin: unset;
 }
+.page-wrapper.background {
+    background-image: url("images/medium-bright-coffee-beans.jpg");
+    background-size: contain;
+    margin-bottom: 50px;
+}
+.container.between {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.container.accordion {
+    margin-top: 50px;
+    margin-bottom: 50px;
 
-/*.container.hero {*/
-/*    background-color: chocolate;*/
-/*    position: relative;*/
-/*}*/
+}
+.container.add-coffee {
+    background-image: url("images/cozy forest cafe.jpeg");
+    background-position: center;
+    background-size: cover;
+    opacity: 90%;
+    margin-top: 30px;
+}
 
 img {
     display: flex;
@@ -30,10 +43,12 @@ img {
 }
 
 .hero {
+    background-image: url("images/coffee-world.webp");
     height: 400px;
     opacity: .9;
-    padding: 50px;
-    margin-bottom: 50px;
+    padding: unset;
+    margin-bottom: unset;
+    background-position: center;
 }
 
 ul {
@@ -46,7 +61,7 @@ li {
     list-style: none;
     font-family: 'Tangerine', cursive;
     font-size: 30pt;
-    font-weight: bold;
+    font-weight: 700;
 
 }
 
@@ -67,6 +82,7 @@ li {
     font-size: 25px;
     text-align: center;
     background-color: black;
+    width: 100%;
 }
 
 a {
@@ -78,7 +94,6 @@ a {
     right: 200px;
     top: 350px;
     width: 1040px;
-    background-image: var(--bs-gradient);
 }
 
 .accordion-body-light {
@@ -105,28 +120,42 @@ a {
 }
 
 h1 {
-    background-color: chocolate;
+    background-color: black;
     color: #FFE4C4;
+    max-width: 75%;
+    text-align: center;
+    font-family: 'Bad Script', cursive;
 }
 h3 {
-    background-color: chocolate;
+    background-color: black;
     color: #FFE4C4;
+    font-family: 'Bad Script', cursive;
+    font-size: 15pt;
+}
+.add-coffee .row {
+    display: flex;
+    justify-content: center;
 }
 
 .form-label {
-    background-color: chocolate;
+    background-color: black;
     color: #FFE4C4;
 }
 
 #add-coffee-btn {
-    background-color: chocolate;
+    background-color: black;
     color: #FFE4C4;
 }
 
+.container.add-coffee {
+    max-width: 50%;
+    text-align: center;
+    margin-bottom: 30px;
+}
 p {
     display: flex;
     justify-content: start;
-    font-family: 'Bad Script', cursive;;
+    font-family: 'Bad Script', cursive;
     font-size: 20pt;
 }
 
