@@ -9,7 +9,7 @@
 <!--    HEADER STARTS  -->
     <header>
         <div class="container-fluid">
-        <nav class="navbar navbar-expand-lg" >
+        <nav class="navbar" >
             <div class="row d-flex align-items-center justify-content-center ">
                 <div class="col d-flex align-items-center justify-content-center col-1">
                     <img id="navbar-image" src="images/cartoon-coffee.gif" alt="Cartoon Coffee">
@@ -17,12 +17,8 @@
                 <div class="col d-flex align-items-center col-1">
                     <a class="navbar-brand" href="#">Coffee</a>
                 </div>
-                <div class="col d-flex align-items-center col-7">
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <div class="d-flex align-items-center flex-row col-7">
+                        <ul class="me-auto gap-4 mb-2 mb-lg-0">
                             <li class="nav-item">
                                 <a class="nav-link active" aria-current="page" href="#">Home</a>
                             </li>
@@ -36,9 +32,8 @@
                                 <a class="nav-link" href="#">Locations</a>
                             </li>
                         </ul>
-                        </div>
                 </div>
-                <div class="col align-self-end col-3">
+                <div class="col d-flex align-items-center col-3">
                     <form class="d-flex" role="search" id="navSearch">
                         <input id="search" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                         <button id="submit-search" class="btn btn-outline-success" type="submit">Search</button>
@@ -156,7 +151,7 @@
                 </form>
             </section>
             <section class="my-4 my-lg-0 col-lg-8">
-                <h3>Coffee:</h3>
+                <h2>Coffee:</h2>
                 <ul class="list-group" id="to-do-list">
 
                 </ul>

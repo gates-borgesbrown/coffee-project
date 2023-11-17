@@ -10,16 +10,20 @@
     flex: fit-content;
     background-repeat: no-repeat;
     padding: unset;
-    margin: unset;
+    margin-bottom: 50px;
 }
 .page-wrapper.background {
     background-image: url("images/medium-bright-coffee-beans.jpg");
-    background-size: contain;
+    background-size: cover;
+    background-attachment: fixed;
     margin-bottom: 50px;
 }
 .container.between {
     margin-top: 20px;
     margin-bottom: 20px;
+}
+.container-fluid {
+    padding: unset;
 }
 .container.accordion {
     margin-top: 50px;
@@ -31,7 +35,8 @@
     background-position: center;
     background-size: cover;
     opacity: 90%;
-    margin-top: 30px;
+    margin-top: 50px;
+    padding: unset;
 }
 
 img {
@@ -83,6 +88,7 @@ li {
     text-align: center;
     background-color: black;
     width: 100%;
+
 }
 
 a {
@@ -126,11 +132,18 @@ h1 {
     text-align: center;
     font-family: 'Bad Script', cursive;
 }
+h2 {
+    background-color: black;
+    color: #FFE4C4;
+    font-family: 'Bad Script', cursive;
+
+}
 h3 {
     background-color: black;
     color: #FFE4C4;
     font-family: 'Bad Script', cursive;
     font-size: 15pt;
+
 }
 .add-coffee .row {
     display: flex;
